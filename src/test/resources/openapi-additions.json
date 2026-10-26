@@ -1,0 +1,1451 @@
+[
+  {
+    "operationId": "userSeatList",
+    "api": "CustomerApi",
+    "method": "listSeats",
+    "verb": "GET",
+    "path": "/open/user/seat/list",
+    "argTypes": [],
+    "argValues": [],
+    "query": {},
+    "body": null,
+    "result": [
+      {
+        "id": 1212,
+        "phone": "13389891234",
+        "email": "13389891234@qq.com"
+      }
+    ]
+  },
+  {
+    "operationId": "userChatStatus",
+    "api": "CustomerApi",
+    "method": "getChatStatus",
+    "verb": "POST",
+    "path": "/open/user/chatStatus",
+    "argTypes": [
+      "CustomerChatStatusRequest"
+    ],
+    "argValues": [
+      {
+        "customerId": "8615877641407"
+      }
+    ],
+    "query": {},
+    "body": {
+      "customerId": "8615877641407"
+    },
+    "result": {
+      "chatStatus": "PASS_THREAD_CONTROL"
+    }
+  },
+  {
+    "operationId": "userSeatCreateSession",
+    "api": "CustomerApi",
+    "method": "createSession",
+    "verb": "POST",
+    "path": "/open/user/seat/createSession",
+    "argTypes": [
+      "UserSeatSessionRequest"
+    ],
+    "argValues": [
+      {
+        "seatId": 1212,
+        "customerId": "8615877641407"
+      }
+    ],
+    "query": {},
+    "body": {
+      "seatId": 1212,
+      "customerId": "8615877641407"
+    },
+    "result": true
+  },
+  {
+    "operationId": "userSeatCloseSession",
+    "api": "CustomerApi",
+    "method": "closeSession",
+    "verb": "POST",
+    "path": "/open/user/seat/closeSession",
+    "argTypes": [
+      "UserSeatSessionRequest"
+    ],
+    "argValues": [
+      {
+        "seatId": 1212,
+        "customerId": "8615877641407"
+      }
+    ],
+    "query": {},
+    "body": {
+      "seatId": 1212,
+      "customerId": "8615877641407"
+    },
+    "result": true
+  },
+  {
+    "operationId": "batchQueryMessageOrigin",
+    "api": "MessageApi",
+    "method": "batchQueryOrigin",
+    "verb": "POST",
+    "path": "/open/whatsapp/message/origin/batchQuery",
+    "argTypes": [
+      "MessageOriginBatchQueryRequest"
+    ],
+    "argValues": [
+      {
+        "channel": "whatsapp",
+        "channelMids": [
+          "wamid.HBgNODYxNTg5Mzc1OTQzMhUCABIYFDNBQTA0NjIxQ0YwMzI4OEEzRTdFAA==",
+          "wamid.HBgNODYxNTg5Mzc1OTQzMhUCABIYFDFCQjM5NjJFQTY5MjEzOTU0RTY2AA=="
+        ]
+      }
+    ],
+    "query": {},
+    "body": {
+      "channel": "whatsapp",
+      "channelMids": [
+        "wamid.HBgNODYxNTg5Mzc1OTQzMhUCABIYFDNBQTA0NjIxQ0YwMzI4OEEzRTdFAA==",
+        "wamid.HBgNODYxNTg5Mzc1OTQzMhUCABIYFDFCQjM5NjJFQTY5MjEzOTU0RTY2AA=="
+      ]
+    },
+    "result": {
+      "list": [
+        {
+          "channelMid": "wamid.HBgNODYxNTg5Mzc1OTQzMhUCABIYFDNBQTA0NjIxQ0YwMzI4OEEzRTdFAA==",
+          "sendSceneCode": "ORDER_NOTICE_STRATEGY",
+          "sendScene": "订单通知策略",
+          "sendSceneBusinessId": "1"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "ctwaDatasetCreate",
+    "api": "BizSyncApi",
+    "method": "createCtwaDataset",
+    "verb": "POST",
+    "path": "/v1/ctwa/conversion/dataset/create",
+    "argTypes": [
+      "CtwaDatasetCreateRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "dataset_name": "Meetbot CTWA conversions"
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "dataset_name": "Meetbot CTWA conversions"
+      }
+    },
+    "result": {
+      "id": "1202174380666400"
+    }
+  },
+  {
+    "operationId": "ctwaDatasetQuery",
+    "api": "BizSyncApi",
+    "method": "queryCtwaDataset",
+    "verb": "GET",
+    "path": "/v1/ctwa/conversion/dataset/query",
+    "argTypes": [
+      "String"
+    ],
+    "argValues": [
+      "123456789012345"
+    ],
+    "query": {
+      "wabaId": "123456789012345"
+    },
+    "body": null,
+    "result": {
+      "id": "1202174380666400"
+    }
+  },
+  {
+    "operationId": "whatsappPhoneQualityQuery",
+    "api": "AccountApi",
+    "method": "getPhoneQuality",
+    "verb": "GET",
+    "path": "/v1/whatsapp/phone/number/quality",
+    "argTypes": [
+      "String"
+    ],
+    "argValues": [
+      "123456789012346"
+    ],
+    "query": {
+      "phoneId": "123456789012346"
+    },
+    "body": null,
+    "result": {
+      "id": "111681701943055",
+      "quality_rating": "GREEN",
+      "throughput": {
+        "level": "STANDARD"
+      }
+    }
+  },
+  {
+    "operationId": "whatsappTemplateDetails",
+    "api": "TemplateApi",
+    "method": "details",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/details",
+    "argTypes": [
+      "String",
+      "String"
+    ],
+    "argValues": [
+      "1720583745904374",
+      "id,name,status,category,language,components"
+    ],
+    "query": {
+      "templateId": "1720583745904374",
+      "fields": "id,name,status,category,language,components"
+    },
+    "body": null,
+    "result": {
+      "id": "1720583745904374",
+      "name": "order_update",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "language": "en_US",
+      "components": []
+    }
+  },
+  {
+    "operationId": "whatsappTemplateCompare",
+    "api": "TemplateApi",
+    "method": "compare",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/compare",
+    "argTypes": [
+      "String",
+      "String",
+      "Long",
+      "Long"
+    ],
+    "argValues": [
+      "1720583745904374",
+      "1720583745904375",
+      1789420800,
+      1790025600
+    ],
+    "query": {
+      "templateId": "1720583745904374",
+      "templateIds": "1720583745904375",
+      "start": 1789420800,
+      "end": 1790025600
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "metric": "BLOCK_RATE",
+          "order_by_relative_metric": [
+            "1720583745904374",
+            "1720583745904375"
+          ]
+        },
+        {
+          "metric": "MESSAGE_SENDS",
+          "number_values": [
+            {
+              "key": "1720583745904374",
+              "value": 2400
+            },
+            {
+              "key": "1720583745904375",
+              "value": 1800
+            }
+          ]
+        },
+        {
+          "metric": "TOP_BLOCK_REASON",
+          "string_values": [
+            {
+              "key": "1720583745904374",
+              "value": "NO_REASON_GIVEN"
+            },
+            {
+              "key": "1720583745904375",
+              "value": "SPAM"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappTemplateArchive",
+    "api": "TemplateApi",
+    "method": "archive",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/archive",
+    "argTypes": [
+      "WhatsappTemplateArchiveRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "hsm_ids": [
+            "1720583745904374",
+            "1720583745904375"
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "hsm_ids": [
+          "1720583745904374",
+          "1720583745904375"
+        ]
+      }
+    },
+    "result": {
+      "archived_templates": [
+        "1720583745904374",
+        "1720583745904375"
+      ],
+      "failed_templates": {}
+    }
+  },
+  {
+    "operationId": "whatsappTemplateUnarchive",
+    "api": "TemplateApi",
+    "method": "unarchive",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/unarchive",
+    "argTypes": [
+      "WhatsappTemplateUnarchiveRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "hsm_ids": [
+            "1720583745904374"
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "hsm_ids": [
+          "1720583745904374"
+        ]
+      }
+    },
+    "result": {
+      "unarchived_templates": [
+        "1720583745904374"
+      ],
+      "failed_templates": {}
+    }
+  },
+  {
+    "operationId": "whatsappTemplateMigrate",
+    "api": "TemplateApi",
+    "method": "migrate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/migrate",
+    "argTypes": [
+      "WhatsappTemplateMigrateRequest"
+    ],
+    "argValues": [
+      {
+        "destinationWabaId": "123456789012346",
+        "param": {
+          "source_waba_id": "123456789012345",
+          "template_ids": [
+            "1720583745904374"
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "destinationWabaId": "123456789012346",
+      "param": {
+        "source_waba_id": "123456789012345",
+        "template_ids": [
+          "1720583745904374"
+        ]
+      }
+    },
+    "result": {
+      "migrated_templates": [
+        "1720583745904374"
+      ],
+      "failed_templates": []
+    }
+  },
+  {
+    "operationId": "whatsappTemplatePreview",
+    "api": "TemplateApi",
+    "method": "preview",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/preview",
+    "argTypes": [
+      "WhatsappTemplatePreviewRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "category": "AUTHENTICATION",
+        "languages": "en_US,es_ES",
+        "addSecurityRecommendation": true,
+        "codeExpirationMinutes": 10,
+        "buttonTypes": "OTP",
+        "businessName": "Meetbot"
+      }
+    ],
+    "query": {
+      "wabaId": "123456789012345",
+      "category": "AUTHENTICATION",
+      "languages": "en_US,es_ES",
+      "addSecurityRecommendation": true,
+      "codeExpirationMinutes": 10,
+      "buttonTypes": "OTP",
+      "businessName": "Meetbot"
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "body": "*{{1}}* is your verification code. For your security, do not share this code.",
+          "buttons": [
+            {
+              "autofill_text": "Autofill",
+              "text": "Copy code"
+            }
+          ],
+          "footer": "This code expires in 10 minutes.",
+          "language": "en_US"
+        },
+        {
+          "body": "Tu código de verificación es *{{1}}*. Por tu seguridad, no lo compartas.",
+          "buttons": [
+            {
+              "autofill_text": "Autocompletar",
+              "text": "Copiar código"
+            }
+          ],
+          "footer": "Este código caduca en 10 minutos.",
+          "language": "es_ES"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappTemplateUpsert",
+    "api": "TemplateApi",
+    "method": "upsert",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/upsert",
+    "argTypes": [
+      "WhatsappTemplateUpsertRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "name": "authentication_code_copy_code",
+          "languages": [
+            "en_US",
+            "es_ES"
+          ],
+          "category": "AUTHENTICATION",
+          "components": [
+            {
+              "type": "BODY",
+              "add_security_recommendation": true
+            },
+            {
+              "type": "FOOTER",
+              "code_expiration_minutes": 10
+            },
+            {
+              "type": "BUTTONS",
+              "buttons": [
+                {
+                  "type": "OTP",
+                  "otp_type": "COPY_CODE"
+                }
+              ]
+            }
+          ],
+          "message_send_ttl_seconds": 300
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "name": "authentication_code_copy_code",
+        "languages": [
+          "en_US",
+          "es_ES"
+        ],
+        "category": "AUTHENTICATION",
+        "components": [
+          {
+            "type": "BODY",
+            "add_security_recommendation": true
+          },
+          {
+            "type": "FOOTER",
+            "code_expiration_minutes": 10
+          },
+          {
+            "type": "BUTTONS",
+            "buttons": [
+              {
+                "type": "OTP",
+                "otp_type": "COPY_CODE"
+              }
+            ]
+          }
+        ],
+        "message_send_ttl_seconds": 300
+      }
+    },
+    "result": {
+      "data": [
+        {
+          "id": "123456789012401",
+          "language": "en_US",
+          "status": "APPROVED"
+        },
+        {
+          "id": "123456789012402",
+          "language": "es_ES",
+          "status": "APPROVED"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappTemplateGroupList",
+    "api": "TemplateApi",
+    "method": "groupList",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/groups/list",
+    "argTypes": [
+      "String",
+      "String",
+      "Long",
+      "String"
+    ],
+    "argValues": [
+      "123456789012345",
+      "id,name,description,status",
+      20,
+      "QVFI..."
+    ],
+    "query": {
+      "wabaId": "123456789012345",
+      "fields": "id,name,description,status",
+      "limit": 20,
+      "after": "QVFI..."
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "id": "1234567890",
+          "name": "order_updates",
+          "description": "Order templates",
+          "status": "ACTIVE"
+        }
+      ],
+      "paging": {
+        "cursors": {
+          "after": "QVFI..."
+        }
+      }
+    }
+  },
+  {
+    "operationId": "whatsappTemplateGroupCreate",
+    "api": "TemplateApi",
+    "method": "groupCreate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/groups/create",
+    "argTypes": [
+      "WhatsappTemplateGroupCreateRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "name": "order_updates",
+          "description": "Order templates",
+          "whatsapp_business_templates": [
+            "1720583745904374"
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "name": "order_updates",
+        "description": "Order templates",
+        "whatsapp_business_templates": [
+          "1720583745904374"
+        ]
+      }
+    },
+    "result": {
+      "id": "1234567890"
+    }
+  },
+  {
+    "operationId": "whatsappTemplateGroupDetails",
+    "api": "TemplateApi",
+    "method": "groupDetails",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/groups/details",
+    "argTypes": [
+      "String",
+      "String"
+    ],
+    "argValues": [
+      "1234567890",
+      "id,name,description,status,whatsapp_business_templates"
+    ],
+    "query": {
+      "templateGroupId": "1234567890",
+      "fields": "id,name,description,status,whatsapp_business_templates"
+    },
+    "body": null,
+    "result": {
+      "id": "1234567890",
+      "name": "order_updates",
+      "status": "ACTIVE",
+      "whatsapp_business_templates": {
+        "data": []
+      }
+    }
+  },
+  {
+    "operationId": "whatsappTemplateGroupUpdate",
+    "api": "TemplateApi",
+    "method": "groupUpdate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/groups/update",
+    "argTypes": [
+      "WhatsappTemplateGroupUpdateRequest"
+    ],
+    "argValues": [
+      {
+        "templateGroupId": "1234567890",
+        "param": {
+          "description": "Updated order templates"
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "templateGroupId": "1234567890",
+      "param": {
+        "description": "Updated order templates"
+      }
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappTemplateGroupDelete",
+    "api": "TemplateApi",
+    "method": "groupDelete",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/groups/delete",
+    "argTypes": [
+      "WhatsappTemplateGroupDeleteRequest"
+    ],
+    "argValues": [
+      {
+        "templateGroupId": "1234567890"
+      }
+    ],
+    "query": {},
+    "body": {
+      "templateGroupId": "1234567890"
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappTemplateLibrary",
+    "api": "TemplateApi",
+    "method": "library",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/library",
+    "argTypes": [
+      "WhatsappTemplateLibraryRequest"
+    ],
+    "argValues": [
+      {
+        "category": "UTILITY",
+        "search": "delivery",
+        "topic": "ORDER_MANAGEMENT",
+        "usecase": "DELIVERY_FAILED",
+        "industry": "E_COMMERCE",
+        "language": "en_US",
+        "name": "delivery_failed_2_form",
+        "limit": 25,
+        "after": "MjQZD",
+        "before": "MAZDZD"
+      }
+    ],
+    "query": {
+      "category": "UTILITY",
+      "search": "delivery",
+      "topic": "ORDER_MANAGEMENT",
+      "usecase": "DELIVERY_FAILED",
+      "industry": "E_COMMERCE",
+      "language": "en_US",
+      "name": "delivery_failed_2_form",
+      "limit": 25,
+      "after": "MjQZD",
+      "before": "MAZDZD"
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "name": "delivery_failed_2_form",
+          "language": "en_US",
+          "category": "UTILITY",
+          "topic": "ORDER_MANAGEMENT",
+          "usecase": "DELIVERY_FAILED",
+          "industry": [
+            "E_COMMERCE"
+          ],
+          "components": []
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappMediaDelete",
+    "api": "MessageApi",
+    "method": "deleteMedia",
+    "verb": "POST",
+    "path": "/v1/whatsapp/file/delete",
+    "argTypes": [
+      "WhatsappMediaDeleteRequest"
+    ],
+    "argValues": [
+      {
+        "mediaId": "123456789012345"
+      }
+    ],
+    "query": {},
+    "body": {
+      "mediaId": "123456789012345"
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappWelcomeMessageCreate",
+    "api": "WelcomeMessageApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/v1/whatsapp/welcomeMessage/create",
+    "argTypes": [
+      "WhatsappWelcomeMessageCreateRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "name": "Driver sign-up",
+          "welcomeMessageSequence": {
+            "text": "Welcome to our test account",
+            "autofill_message": {
+              "content": "Hello! Can I get more info on this?"
+            }
+          }
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "name": "Driver sign-up",
+        "welcomeMessageSequence": {
+          "text": "Welcome to our test account",
+          "autofill_message": {
+            "content": "Hello! Can I get more info on this?"
+          }
+        }
+      }
+    },
+    "result": {
+      "id": "1234567890"
+    }
+  },
+  {
+    "operationId": "whatsappWelcomeMessageList",
+    "api": "WelcomeMessageApi",
+    "method": "list",
+    "verb": "GET",
+    "path": "/v1/whatsapp/welcomeMessage/list",
+    "argTypes": [
+      "String",
+      "String",
+      "Long",
+      "String"
+    ],
+    "argValues": [
+      "123456789012345",
+      "1234567890",
+      20,
+      "QVFI..."
+    ],
+    "query": {
+      "wabaId": "123456789012345",
+      "sequenceId": "1234567890",
+      "limit": 20,
+      "after": "QVFI..."
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "id": "1234567890",
+          "name": "Driver sign-up",
+          "welcome_message_sequence": {
+            "text": "Welcome to our test account",
+            "autofill_message": {
+              "content": "Hello! Can I get more info on this?"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappWelcomeMessageUpdate",
+    "api": "WelcomeMessageApi",
+    "method": "update",
+    "verb": "POST",
+    "path": "/v1/whatsapp/welcomeMessage/update",
+    "argTypes": [
+      "WhatsappWelcomeMessageUpdateRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "param": {
+          "sequenceId": "1234567890",
+          "name": "Driver sign-up",
+          "welcomeMessageSequence": {
+            "text": "Welcome to our test account",
+            "autofill_message": {
+              "content": "Hello! Can I get more info on this?"
+            }
+          }
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "param": {
+        "sequenceId": "1234567890",
+        "name": "Driver sign-up",
+        "welcomeMessageSequence": {
+          "text": "Welcome to our test account",
+          "autofill_message": {
+            "content": "Hello! Can I get more info on this?"
+          }
+        }
+      }
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappWelcomeMessageDelete",
+    "api": "WelcomeMessageApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/v1/whatsapp/welcomeMessage/delete",
+    "argTypes": [
+      "WhatsappWelcomeMessageDeleteRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "sequenceId": "1234567890"
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345",
+      "sequenceId": "1234567890"
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappGroupCreate",
+    "api": "GroupApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/create",
+    "argTypes": [
+      "WhatsappGroupCreateRequest"
+    ],
+    "argValues": [
+      {
+        "phoneId": "123456789012346",
+        "param": {
+          "messaging_product": "whatsapp",
+          "subject": "Customer Community"
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "phoneId": "123456789012346",
+      "param": {
+        "messaging_product": "whatsapp",
+        "subject": "Customer Community"
+      }
+    },
+    "result": {
+      "messaging_product": "whatsapp",
+      "groups": [
+        {
+          "id": "1234567890"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappGroupList",
+    "api": "GroupApi",
+    "method": "list",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/list",
+    "argTypes": [
+      "String",
+      "String",
+      "Long",
+      "String"
+    ],
+    "argValues": [
+      "123456789012346",
+      "id,subject,description",
+      20,
+      "QVFI..."
+    ],
+    "query": {
+      "phoneId": "123456789012346",
+      "fields": "id,subject,description",
+      "limit": 20,
+      "after": "QVFI..."
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "id": "1234567890",
+          "subject": "Customer Community"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappGroupDetails",
+    "api": "GroupApi",
+    "method": "details",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/details",
+    "argTypes": [
+      "String",
+      "String"
+    ],
+    "argValues": [
+      "1234567890",
+      "id,subject,description,participants"
+    ],
+    "query": {
+      "groupId": "1234567890",
+      "fields": "id,subject,description,participants"
+    },
+    "body": null,
+    "result": {
+      "id": "1234567890",
+      "subject": "Customer Community",
+      "participants": {
+        "data": []
+      }
+    }
+  },
+  {
+    "operationId": "whatsappGroupUpdate",
+    "api": "GroupApi",
+    "method": "update",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/update",
+    "argTypes": [
+      "WhatsappGroupUpdateRequest"
+    ],
+    "argValues": [
+      {
+        "groupId": "1234567890",
+        "param": {
+          "messaging_product": "whatsapp",
+          "subject": "Updated Community",
+          "description": "Customer community for product updates"
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "groupId": "1234567890",
+      "param": {
+        "messaging_product": "whatsapp",
+        "subject": "Updated Community",
+        "description": "Customer community for product updates"
+      }
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappGroupDelete",
+    "api": "GroupApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/delete",
+    "argTypes": [
+      "WhatsappGroupDeleteRequest"
+    ],
+    "argValues": [
+      {
+        "groupId": "1234567890"
+      }
+    ],
+    "query": {},
+    "body": {
+      "groupId": "1234567890"
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappGroupParticipantsRemove",
+    "api": "GroupApi",
+    "method": "participantsRemove",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/participants/remove",
+    "argTypes": [
+      "WhatsappGroupParticipantsRemoveRequest"
+    ],
+    "argValues": [
+      {
+        "groupId": "1234567890",
+        "param": {
+          "messaging_product": "whatsapp",
+          "participants": [
+            {
+              "user": "8613800138000"
+            }
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "groupId": "1234567890",
+      "param": {
+        "messaging_product": "whatsapp",
+        "participants": [
+          {
+            "user": "8613800138000"
+          }
+        ]
+      }
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappGroupInviteLink",
+    "api": "GroupApi",
+    "method": "inviteLink",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/inviteLink",
+    "argTypes": [
+      "String"
+    ],
+    "argValues": [
+      "1234567890"
+    ],
+    "query": {
+      "groupId": "1234567890"
+    },
+    "body": null,
+    "result": {
+      "invite_link": "https://chat.whatsapp.com/AbCdEf..."
+    }
+  },
+  {
+    "operationId": "whatsappGroupInviteLinkReset",
+    "api": "GroupApi",
+    "method": "inviteLinkReset",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/inviteLink/reset",
+    "argTypes": [
+      "WhatsappGroupInviteLinkResetRequest"
+    ],
+    "argValues": [
+      {
+        "groupId": "1234567890",
+        "param": {
+          "messaging_product": "whatsapp"
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "groupId": "1234567890",
+      "param": {
+        "messaging_product": "whatsapp"
+      }
+    },
+    "result": {
+      "invite_link": "https://chat.whatsapp.com/NewLink..."
+    }
+  },
+  {
+    "operationId": "whatsappGroupJoinRequestList",
+    "api": "GroupApi",
+    "method": "joinRequestList",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/joinRequests",
+    "argTypes": [
+      "String",
+      "Long",
+      "String"
+    ],
+    "argValues": [
+      "1234567890",
+      20,
+      "QVFI..."
+    ],
+    "query": {
+      "groupId": "1234567890",
+      "limit": 20,
+      "after": "QVFI..."
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "phone_number": "8613800138000",
+          "requested_at": "2026-09-18T03:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappGroupJoinRequestApprove",
+    "api": "GroupApi",
+    "method": "joinRequestApprove",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/joinRequests/approve",
+    "argTypes": [
+      "WhatsappGroupJoinRequestApproveRequest"
+    ],
+    "argValues": [
+      {
+        "groupId": "1234567890",
+        "param": {
+          "messaging_product": "whatsapp",
+          "join_requests": [
+            "123456789012345"
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "groupId": "1234567890",
+      "param": {
+        "messaging_product": "whatsapp",
+        "join_requests": [
+          "123456789012345"
+        ]
+      }
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappGroupJoinRequestReject",
+    "api": "GroupApi",
+    "method": "joinRequestReject",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/joinRequests/reject",
+    "argTypes": [
+      "WhatsappGroupJoinRequestRejectRequest"
+    ],
+    "argValues": [
+      {
+        "groupId": "1234567890",
+        "param": {
+          "messaging_product": "whatsapp",
+          "join_requests": [
+            "123456789012345"
+          ]
+        }
+      }
+    ],
+    "query": {},
+    "body": {
+      "groupId": "1234567890",
+      "param": {
+        "messaging_product": "whatsapp",
+        "join_requests": [
+          "123456789012345"
+        ]
+      }
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappAnalyticsQuery",
+    "api": "AnalyticsApi",
+    "method": "query",
+    "verb": "GET",
+    "path": "/v1/whatsapp/analytics/query",
+    "argTypes": [
+      "WhatsappAnalyticsQueryRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345",
+        "field": "conversation_analytics",
+        "start": 1788998400,
+        "end": 1789603200,
+        "granularity": "DAILY",
+        "phoneNumbers": "123456789012346",
+        "countryCodes": "CN,US",
+        "productTypes": "MARKETING",
+        "metricTypes": "SENT,DELIVERED",
+        "pricingTypes": "REGULAR",
+        "pricingCategories": "MARKETING",
+        "dimensions": "CONVERSATION_TYPE",
+        "conversationCategories": "MARKETING",
+        "conversationTypes": "FREE_ENTRY_POINT",
+        "conversationDirections": "BUSINESS_INITIATED",
+        "directions": "SENT",
+        "templateIds": "1720583745904374",
+        "templateGroupIds": "1234567890",
+        "groupIds": "1234567890",
+        "productType": "WHATSAPP",
+        "useWabaTimezone": true
+      }
+    ],
+    "query": {
+      "wabaId": "123456789012345",
+      "field": "conversation_analytics",
+      "start": 1788998400,
+      "end": 1789603200,
+      "granularity": "DAILY",
+      "phoneNumbers": "123456789012346",
+      "countryCodes": "CN,US",
+      "productTypes": "MARKETING",
+      "metricTypes": "SENT,DELIVERED",
+      "pricingTypes": "REGULAR",
+      "pricingCategories": "MARKETING",
+      "dimensions": "CONVERSATION_TYPE",
+      "conversationCategories": "MARKETING",
+      "conversationTypes": "FREE_ENTRY_POINT",
+      "conversationDirections": "BUSINESS_INITIATED",
+      "directions": "SENT",
+      "templateIds": "1720583745904374",
+      "templateGroupIds": "1234567890",
+      "groupIds": "1234567890",
+      "productType": "WHATSAPP",
+      "useWabaTimezone": true
+    },
+    "body": null,
+    "result": {
+      "conversation_analytics": {
+        "data": [
+          {
+            "start": 1788998400,
+            "end": 1789084800,
+            "conversation": 12
+          }
+        ]
+      },
+      "id": "111918461725990"
+    }
+  },
+  {
+    "operationId": "whatsappTemplateInsightsEnable",
+    "api": "AnalyticsApi",
+    "method": "enableTemplateInsights",
+    "verb": "POST",
+    "path": "/v1/whatsapp/analytics/templateInsights/enable",
+    "argTypes": [
+      "WhatsappTemplateInsightsEnableRequest"
+    ],
+    "argValues": [
+      {
+        "wabaId": "123456789012345"
+      }
+    ],
+    "query": {},
+    "body": {
+      "wabaId": "123456789012345"
+    },
+    "result": {
+      "success": true
+    }
+  },
+  {
+    "operationId": "whatsappAnalyticsActivities",
+    "api": "AnalyticsApi",
+    "method": "activities",
+    "verb": "GET",
+    "path": "/v1/whatsapp/analytics/activities",
+    "argTypes": [
+      "String",
+      "Long",
+      "Long",
+      "Long",
+      "String"
+    ],
+    "argValues": [
+      "123456789012345",
+      1788998400,
+      1789603200,
+      20,
+      "QVFI..."
+    ],
+    "query": {
+      "wabaId": "123456789012345",
+      "since": 1788998400,
+      "until": 1789603200,
+      "limit": 20,
+      "after": "QVFI..."
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "id": "1234567890",
+          "event_time": 1788998400,
+          "event_type": "ACCOUNT_UPDATE"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "whatsappPreverifiedPhoneList",
+    "api": "AccountApi",
+    "method": "listPreverifiedPhones",
+    "verb": "GET",
+    "path": "/v1/whatsapp/phone/preVerified",
+    "argTypes": [
+      "String",
+      "String",
+      "Long",
+      "String"
+    ],
+    "argValues": [
+      "123456789012347",
+      "VERIFIED",
+      20,
+      "QVFI..."
+    ],
+    "query": {
+      "businessId": "123456789012347",
+      "codeVerificationStatus": "VERIFIED",
+      "limit": 20,
+      "after": "QVFI..."
+    },
+    "body": null,
+    "result": {
+      "data": [
+        {
+          "id": "111681701943055",
+          "display_phone_number": "+1 650 555 0100",
+          "code_verification_status": "VERIFIED"
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "queryUsersByTagValue",
+    "api": "TagApi",
+    "method": "queryUsersByTagValue",
+    "verb": "POST",
+    "path": "/tags/users/query",
+    "argTypes": [
+      "TagUsersQueryRequest"
+    ],
+    "argValues": [
+      {
+        "tagValueId": "2068885484806533122",
+        "lastId": "0",
+        "pageSize": 100
+      }
+    ],
+    "query": {},
+    "body": {
+      "tagValueId": "2068885484806533122",
+      "lastId": "0",
+      "pageSize": 100
+    },
+    "result": {
+      "list": [
+        {
+          "userId": "8613800138000",
+          "channel": "whatsapp"
+        }
+      ],
+      "lastId": "2068995484806533999",
+      "hasMore": true
+    }
+  }
+]
